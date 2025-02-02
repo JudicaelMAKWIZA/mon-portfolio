@@ -2,25 +2,60 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 0;
+    padding-top: 70px;
     margin: 0;
 }
 
 header {
     text-align: left;
-    text-transform: uppercase;
     background: #333;
     color: white;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 section {
     margin: 40px 0;
 }
 
+.sup-project{
+    display: flex;
+}
 .project {
     background: #f4f4f4;
     padding: 10px;
     margin: 10px auto;
-    width: 50%;
+    width: 40%;
     border-radius: 8px;
 }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/*
+
+body {
+    padding-top: 60px; / Pour éviter que le contenu soit caché par le header /
+}
+
+*/
+

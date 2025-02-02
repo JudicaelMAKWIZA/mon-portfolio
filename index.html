@@ -5,37 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Judicaël Makwiza</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Judicaël Makwiza</h1>
-        <!-- <h3>Ingénieur en informatique</h3>-->
-         <nav>
-            
-         </nav>
+    <header class="bg-gray-800 text-white p-4 fixed w-full top-0 flex justify-between items-center">
+        <h1 class="text-xl font-bold">Judicael Makwiza</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="#about" class="hover:text-gray-300">À propos</a></li>
+                <li><a href="#projects" class="hover:text-gray-300">Projets</a></li>
+                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <p>Brève description de toi et de tes compétences.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Mes Projets</h2>
-        <div class="project">
-            <h3>Projet 1</h3>
-            <p>Description du projet.</p>
-        </div>
-        <div class="project">
-            <h3>Projet 2</h3>
-            <p>Description du projet.</p>
+    <section id="home" class="h-screen flex flex-col justify-center items-center text-center bg-gray-100">
+        <img src="images/jude1.jpg" alt="Ma photo de profil" class="w-80 h-120 rounded-full shadow-lg border-4 border-white">
+        <h1 class="text-4xl font-bold mt-4">Bonjour, je suis <span class="text-blue-500">Judicaël Makwiza</span> !</h1>
+        <p class="text-lg text-gray-600 mt-2">Ingénieur en informatique</p>
+        <div class="mt-4">
+            <a href="#projects" class="bg-blue-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300">
+                Voir mes projets
+            </a>
         </div>
     </section>
+    
+    
+    <section id="about" class="py-20 text-center bg-gray-100">
+        <h2 class="text-3xl font-bold">À propos de moi</h2>
+        <p class="mt-4 text-gray-600">Je suis un passionné de développement...</p>
+    </section>
+    
+    <section id="projects" class="py-20 text-center opacity-0 translate-y-10 transition duration-1000">
+        <h2 class="text-3xl font-bold">Mes Projets</h2>
+        <div class="sup-project">
+            <div class="project">
+                <h3>Projet 1</h3>
+                <p>Description du projet.</p>
+            </div>
+            <div class="project">
+                <h3>Projet 2</h3>
+                <p>Description du projet.</p>
+            </div>
+    </div>
+    </section>
+    
 
     <section id="contact">
         <h2>Me Contacter</h2>
         <p>Email : judicaëlmakwiza67@gmail.com</p>
         <p>LinkedIn : <a href="#">Mon Profil</a></p>
     </section>
+            
+            
+    <button id="backToTop" class="hidden fixed bottom-5 right-5 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+            ↑ Haut
+    </button>
+    <script src="script.js"></script>
+
 </body>
 </html>
