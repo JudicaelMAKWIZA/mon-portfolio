@@ -162,6 +162,13 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
     mobileMenu.classList.toggle("hidden");
 });
 
+// Fermer le menu quand on clique sur un lien
+document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.add("hidden");
+    });
+});
+
 
 
 
