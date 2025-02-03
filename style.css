@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -18,7 +19,13 @@ header {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1000; /* Assure qu'il reste au-dessus de tout */
+    backdrop-filter: blur(10px); /* Floute légèrement l’arrière-plan */
+    transition: background-color 0.3s;
 }
+
+
+
 
 section {
     margin: 40px 0;
@@ -51,11 +58,63 @@ nav ul li a {
     font-weight: bold;
 }
 
-/*
-
-body {
-    padding-top: 60px; / Pour éviter que le contenu soit caché par le header /
+#home {
+    animation: fadeIn 2s ease-in-out;
 }
 
-*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.dark {
+    background-color: #1a202c;
+    color: #ffffff;
+}
+
+.dark h1, .dark h2, .dark h3, .dark p {
+    color: #ffffff;
+}
+
+.dark .bg-white {
+    background-color: #2d3748 !important;
+}
+
+.dark .bg-gray-100 {
+    background-color: #4a5568 !important;
+}
+
+.dark .text-gray-800 {
+    color: #e2e8f0 !important;
+}
+
+.dark .text-gray-600 {
+    color: #a0aec0 !important;
+}
+
+.dark button {
+    background-color: #4a5568;
+    color: white;
+}
+
+
 

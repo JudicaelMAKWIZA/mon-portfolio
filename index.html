@@ -6,23 +6,47 @@
     <title>Judicaël Makwiza</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <meta name="description" content="Portfolio de Judicael Makwiza, Ingénieur en informatique">
+    <meta name="keywords" content="Portfolio, Ingenieur informatique, Développement Web, Judicael Makwiza">
+    <meta name="author" content="Judicael Makwiza">
+
+
 </head>
+
+
+    
 <body>
     <header class="bg-gray-800 text-white p-4 fixed w-full top-0 flex justify-between items-center">
-        <h1 class="text-xl font-bold">Judicael Makwiza</h1>
+        <h1 class="text-5xl font-bold mt-4 flex items-center">
+            <span id="backTop" class="text-blue-500">JM</span>
+        </h1>        
+
         <nav>
             <ul class="flex space-x-4">
+
+
                 <li><a href="#about" class="hover:text-gray-300">À propos</a></li>
                 <li><a href="#projects" class="hover:text-gray-300">Projets</a></li>
+                <li><a href="#skills" class="hover:text-gray-300">Compétences</a></li>
                 <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+                <button id="dark-mode-toggle" class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+                    Mode Sombre 🌙 
+                </button>
             </ul>
         </nav>
+
+
     </header>
 
+    
+
+
     <section id="home" class="h-screen flex flex-col justify-center items-center text-center bg-gray-100">
-        <img src="images/jude1.jpg" alt="Ma photo de profil" class="w-80 h-120 rounded-full shadow-lg border-4 border-white">
-        <h1 class="text-4xl font-bold mt-4">Bonjour, je suis <span class="text-blue-500">Judicaël Makwiza</span> !</h1>
-        <p class="text-lg text-gray-600 mt-2">Ingénieur en informatique</p>
+        <img src="images/jude1.jpg" alt="Ma photo de profil" class="w-80 h-100 rounded-full shadow-lg border-4 border-white">
+        <h1 class="text-4xl font-bold mt-4">Salut, c'est <span class="text-blue-500">Judicaël Makwiza</span> !</h1>
+        <p class="text-lg text-gray-600 mt-2">Développeur passionné par le web et l’IA</p>
         <div class="mt-4">
             <a href="#projects" class="bg-blue-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300">
                 Voir mes projets
@@ -30,33 +54,133 @@
         </div>
     </section>
     
+
+    <section id="about" class="py-16 bg-white text-center">
+        <h2 class="text-3xl font-bold text-gray-800">À propos de moi</h2>
+        <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+            Je suis un passionné d’informatique spécialisé en Data Science et développement web. 
+            Voici mon parcours en quelques étapes.
+        </p>
     
-    <section id="about" class="py-20 text-center bg-gray-100">
-        <h2 class="text-3xl font-bold">À propos de moi</h2>
-        <p class="mt-4 text-gray-600">Je suis un passionné de développement...</p>
-    </section>
+        <div class="mt-8 max-w-4xl mx-auto relative">
+            <div class="border-l-4 border-blue-500 absolute h-full left-1/2 transform -translate-x-1/2"></div>
     
-    <section id="projects" class="py-20 text-center opacity-0 translate-y-10 transition duration-1000">
-        <h2 class="text-3xl font-bold">Mes Projets</h2>
-        <div class="sup-project">
-            <div class="project">
-                <h3>Projet 1</h3>
-                <p>Description du projet.</p>
+            <div class="relative bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto my-6">
+                <h3 class="text-lg font-semibold">2023 - Licence en Informatique</h3>
+                <p class="text-gray-600 text-sm">Université de Kinshasa</p>
             </div>
-            <div class="project">
-                <h3>Projet 2</h3>
-                <p>Description du projet.</p>
+    
+            <div class="relative bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto my-6">
+                <h3 class="text-lg font-semibold">2024 - Smart Trash Can</h3>
+                <p class="text-gray-600 text-sm">Projet de tri intelligent des déchets</p>
             </div>
-    </div>
+    
+            <div class="relative bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto my-6">
+                <h3 class="text-lg font-semibold">2025 - Spécialisation en Data Science</h3>
+                <p class="text-gray-600 text-sm">Début du Master</p>
+            </div>
+        </div>
     </section>
     
 
-    <section id="contact">
-        <h2>Me Contacter</h2>
-        <p>Email : judicaëlmakwiza67@gmail.com</p>
-        <p>LinkedIn : <a href="#">Mon Profil</a></p>
+    <section id="projects" class="py-12 bg-gray-100 dark:bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white text-center mb-8"> Mes Projets</h2>
+    
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Projet 1 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <img src="images/project.jpg" alt="Projet 1" class="rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">Projet 1</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Description rapide du projet.</p>
+                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">Voir plus</a>
+                </div>
+    
+                <!-- Projet 2 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <img src="images/hands-typing-keyboard-top-view.jpg" alt="Projet 2" class="rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">Projet 2</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Description rapide du projet.</p>
+                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">Voir plus</a>
+                </div>
+    
+                <!-- Projet 3 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <img src="images/pj3.jpg" alt="Projet 3" class="rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">Projet 3</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Description rapide du projet.</p>
+                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">Voir plus</a>
+                </div>
+            </div>
+        </div>
     </section>
-            
+    
+    
+    
+    <section id="skills" class="py-16 bg-white text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Mes Compétences</h2>
+        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div class="flex flex-col items-center">
+                <i class="fab fa-html5 text-6xl text-orange-500"></i>
+                <p class="mt-2 text-lg font-medium">HTML5</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fab fa-css3-alt text-6xl text-blue-500"></i>
+                <p class="mt-2 text-lg font-medium">CSS3</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fab fa-js text-6xl text-yellow-500"></i>
+                <p class="mt-2 text-lg font-medium">JavaScript</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fab fa-git-alt text-6xl text-red-500"></i>
+                <p class="mt-2 text-lg font-medium">Git</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="py-16 bg-gray-100 text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Me Contacter</h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Une question ou une collaboration ? Remplis ce formulaire et je te répondrai rapidement !
+        </p>
+    
+        <form action="https://formspree.io/f/xrbekokk" method="POST" class="mt-6 max-w-lg mx-auto bg-white p-6 shadow-lg rounded-lg">
+            <div class="mb-4">
+                <input type="text" name="name" placeholder="Votre Nom" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-4">
+                <input type="email" name="email" placeholder="Votre Email" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-4">
+                <textarea name="message" placeholder="Votre Message" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+            <button type="submit" class="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">Envoyer</button>
+        </form>
+    </section>
+    
+
+    <footer class="text-center py-6">
+        <p>Suivez-moi sur :</p>
+        <div class="flex justify-center gap-4">
+            <a href="https://github.com/ton-github" class="text-2xl text-gray-800 dark:text-white">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ton-linkedin" class="text-2xl text-blue-600">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/ton-facebook" class="text-2xl text-blue-400">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+
+        <p class="mt-4 text-sm text-gray-500">
+            © <span id="year"></span> Judicael Makwiza. Tous droits réservés.
+        </p>
+        
+    </footer>
+    
             
     <button id="backToTop" class="hidden fixed bottom-5 right-5 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
             ↑ Haut
