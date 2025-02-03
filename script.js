@@ -169,7 +169,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
     });
 });*/
 
-
+/*
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -197,6 +197,41 @@ document.addEventListener("DOMContentLoaded", function () {
     // Événements pour le mode sombre
     darkModeToggle.addEventListener("click", toggleDarkMode);
     darkModeToggleMobile.addEventListener("click", toggleDarkMode);
+});*/
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuLinks = document.querySelectorAll("#mobile-menu a");
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const darkModeToggleMobile = document.getElementById("dark-mode-toggle-mobile");
+
+    // Ouvrir / Fermer le menu burger
+    menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+    });
+
+    // Fermer le menu burger après un clic sur un lien
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+        });
+    });
+
+    // Fonction pour basculer le mode sombre et fermer le menu burger
+    function toggleDarkMode() {
+        document.documentElement.classList.toggle("dark");
+    }
+
+    function toggleDarkModeAndCloseMenu() {
+        toggleDarkMode();
+        mobileMenu.classList.add("hidden"); // Fermer le menu burger
+    }
+
+    // Événements pour le mode sombre
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+    darkModeToggleMobile.addEventListener("click", toggleDarkModeAndCloseMenu);
 });
 
 
