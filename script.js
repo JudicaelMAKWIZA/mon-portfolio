@@ -155,6 +155,14 @@ document.addEventListener("DOMContentLoaded", function () {
 // Actualise la signature du site automatiquement en fonction de l'année
 document.getElementById("year").textContent = new Date().getFullYear();
 
+//Menu burger
+
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    let mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.classList.toggle("hidden");
+});
+
+
 
 
 
