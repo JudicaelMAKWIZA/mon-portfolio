@@ -23,11 +23,13 @@
         <h1 class="text-5xl font-bold mt-4 flex items-center">
             <span id="backTop" class="text-blue-500">JM</span>
         </h1>        
-
-                <!-- Bouton Menu Burger (visible sur mobile) -->
-                <button id="menu-toggle" class="md:hidden text-white text-3xl focus:outline-none">
-                    ☰
-                </button>
+    
+        <!-- Bouton Menu Burger (visible sur mobile) -->
+        <button id="menu-toggle" class="md:hidden text-white text-3xl focus:outline-none">
+            ☰
+        </button>
+    
+        <!-- Navigation Desktop -->
         <nav id="nav-menu" class="hidden md:flex space-x-4">
             <ul class="flex space-x-4">
                 <li><a href="#about" class="hover:text-gray-300">À propos</a></li>
@@ -39,25 +41,22 @@
                 </button>
             </ul>
         </nav>
-
-
-              <!-- Menu Mobile (affiché en mode burger) -->
-              <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-gray-800 text-center p-4 md:hidden">
-                <a href="#about" class="block py-2 hover:text-gray-300">À propos</a>
-                <a href="#projects" class="block py-2 hover:text-gray-300">Projets</a>
-                <a href="#skills" class="block py-2 hover:text-gray-300">Compétences</a>
-                <a href="#contact" class="block py-2 hover:text-gray-300">Contact</a>
-              </div>
-
-
-    </header> 
-
+    
+        <!-- Menu Mobile (affiché en mode burger) -->
+        <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-gray-800 text-center p-4 md:hidden">
+            <a href="#about" class="block py-2 hover:text-gray-300">À propos</a>
+            <a href="#projects" class="block py-2 hover:text-gray-300">Projets</a>
+            <a href="#skills" class="block py-2 hover:text-gray-300">Compétences</a>
+            <a href="#contact" class="block py-2 hover:text-gray-300">Contact</a>
+    
+            <!-- Mode sombre dans le menu mobile -->
+            <button id="dark-mode-toggle-mobile" class="mt-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+                Mode Sombre 🌙 
+            </button>
+        </div>
+    </header>    
   
     
-
-    
-
-
     <section id="home" class="h-screen flex flex-col justify-center items-center text-center bg-gray-100">
         <img src="images/jude1.jpg" alt="Ma photo de profil" class="w-80 h-100 rounded-full shadow-lg border-4 border-white">
         <h1 class="text-4xl font-bold mt-4">Salut, c'est <span class="text-blue-500">Judicaël Makwiza</span> !</h1>
