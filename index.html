@@ -72,25 +72,25 @@
     <section id="about" class="py-16 bg-white text-center">
         <h2 class="text-3xl font-bold text-gray-800">À propos de moi</h2>
         <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-            Je suis un passionné d’informatique spécialisé en Data Science et développement web. 
-            Voici mon parcours en quelques étapes.
+            Passionné par le développement web et mobile, ainsi que par le design graphique, 
+            je crée des interfaces modernes et intuitives. 
+            Mon objectif est de concevoir des solutions numériques innovantes, 
+            combinant esthétique et performance. Actuellement, 
+            je travaille sur plusieurs projets alliant développement et créativité, 
+            avec une vision d'avenir axée sur l'organisation d'événements culturels et la billetterie numérique sécurisée.
         </p>
     
         <div class="mt-8 max-w-4xl mx-auto relative">
             <div class="border-l-4 border-blue-500 absolute h-full left-1/2 transform -translate-x-1/2"></div>
     
             <div class="relative bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto my-6">
-                <h3 class="text-lg font-semibold">2023 - Licence en Informatique</h3>
-                <p class="text-gray-600 text-sm">Université de Kinshasa</p>
+                <h3 class="text-lg font-semibold">2019 - 2024</h3>
+                <p class="text-gray-600 text-sm">Licence en Informatique à l'Université de Kinshasa</p>
+                <img src="images/batiment-unikin.jpg" alt="Projet 1" class="rounded-lg">
             </div>
     
             <div class="relative bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto my-6">
-                <h3 class="text-lg font-semibold">2024 - Smart Trash Can</h3>
-                <p class="text-gray-600 text-sm">Projet de tri intelligent des déchets</p>
-            </div>
-    
-            <div class="relative bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto my-6">
-                <h3 class="text-lg font-semibold">2025 - Spécialisation en Data Science</h3>
+                <h3 class="text-lg font-semibold">2025 - A nos jours</h3>
                 <p class="text-gray-600 text-sm">Début du Master</p>
             </div>
         </div>
@@ -102,29 +102,80 @@
             <h2 class="text-3xl font-bold text-gray-800 dark:text-white text-center mb-8"> Mes Projets</h2>
     
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Projet 1 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
-                    <img src="images/project.jpg" alt="Projet 1" class="rounded-lg">
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">Projet 1</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Description rapide du projet.</p>
-                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">Voir plus</a>
-                </div>
-    
-                <!-- Projet 2 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
-                    <img src="images/hands-typing-keyboard-top-view.jpg" alt="Projet 2" class="rounded-lg">
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">Projet 2</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Description rapide du projet.</p>
-                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">Voir plus</a>
-                </div>
-    
-                <!-- Projet 3 -->
-                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
-                    <img src="images/pj3.jpg" alt="Projet 3" class="rounded-lg">
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">Projet 3</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Description rapide du projet.</p>
-                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">Voir plus</a>
-                </div>
+
+        <!-- Projet 1 -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition project w-full">
+            <img src="images/zone-composant.jpg" alt="Projet 1" class="rounded-lg w-full h-auto">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">SITDM</h3>
+            
+            <p class="text-gray-600 dark:text-gray-300 text-justify project-text">
+                Ce projet vise à développer un système intelligent capable de trier automatiquement les déchets en utilisant un 
+                modèle de classification d’image. 
+                <span class="more-text hidden">
+                Le système est équipé d’une caméra et utilise un modèle de machine learning pour identifier et trier les déchets en différentes catégories.
+                </span>
+            </p>
+            
+            <!-- Boutons Voir plus / Voir moins -->
+            <button class="toggle-text text-blue-500 hover:underline mt-2">Voir plus</button>
+
+            <!-- Bouton En savoir plus (Lien GitHub), initialement caché -->
+            <a href="https://github.com/ton-repo/projet-tri-dechets" 
+            class="github-link hidden block text-center border border-blue-500 text-blue-500 px-4 py-2 rounded-lg mt-4 w-fit ml-auto hover:bg-blue-500 hover:text-white transition">
+            En savoir plus...
+            </a>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition project w-full">
+            <img src="images/pharma1.jpg" alt="Projet 2" class="rounded-lg w-full h-auto">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">PharmApp</h3>
+            
+            <p class="text-gray-600 dark:text-gray-300 text-justify project-text">
+                Nous avons le plaisir de vous présenter notre plateforme pour la gestion d'un dépôt pharmaceutique ou d'une pharmacie. 
+               
+                <span class="more-text hidden">
+                Sur notre site, vous pourrez visualiser en ligne les différents produits pharmaceutiques que nous proposons et les choisir directement en ligne. 
+                La plateforme calculera automatiquement la facture pour vous, et vous pourrez même l'imprimer vous-même.
+                </span>
+            </p>
+            
+            <!-- Boutons Voir plus / Voir moins -->
+            <button class="toggle-text text-blue-500 hover:underline mt-2">Voir plus</button>
+
+            <!-- Bouton En savoir plus (Lien GitHub), initialement caché -->
+            <a href="https://github.com/ton-repo/projet-gestion-taches" 
+            class="github-link hidden block text-center border border-blue-500 text-blue-500 px-4 py-2 rounded-lg mt-4 w-fit ml-auto hover:bg-blue-500 hover:text-white transition">
+            En savoir plus...
+            </a>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition project w-full">
+            <img src="images/pj3.jpg" alt="Projet 3" class="rounded-lg w-full h-auto">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">CUKApp</h3>
+            
+            <p class="text-gray-600 dark:text-gray-300 text-justify project-text">
+                CUKApp est une plateforme en ligne qui permet aux patients d'une clinique de pouvoir prendre un rendez-vous avec un expert de 
+                la santé.               
+                <span class="more-text hidden">
+                La plateforme couvre presque tous les services que vous pouvez retrouver dans une clinique (Radiologie, Dentisterie, etc.) 
+                </span>
+            </p>
+            
+            <!-- Boutons Voir plus / Voir moins -->
+            <button class="toggle-text text-blue-500 hover:underline mt-2">Voir plus</button>
+
+            <!-- Bouton En savoir plus (Lien GitHub), initialement caché -->
+            <a href="https://github.com/ton-repo/projet-gestion-taches" 
+            class="github-link hidden block text-center border border-blue-500 text-blue-500 px-4 py-2 rounded-lg mt-4 w-fit ml-auto hover:bg-blue-500 hover:text-white transition">
+            En savoir plus...
+            </a>
+        </div>
+
+
+
+
             </div>
         </div>
     </section>
@@ -200,7 +251,7 @@
     
             
     <button id="backToTop" class="hidden fixed bottom-5 right-5 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
-            ↑ Haut
+            ↑ Aller en Haut
     </button>
     <script src="script.js"></script>
 

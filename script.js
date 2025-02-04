@@ -102,28 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Activer et desactiver le mode sombre
-/*
-document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("dark-mode-toggle");
-    const body = document.body;
-
-    // Vérifier si l'utilisateur a déjà activé le mode sombre
-    if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark");
-    }
-
-    toggleButton.addEventListener("click", function () {
-        body.classList.toggle("dark");
-
-        // Sauvegarder la préférence utilisateur dans le stockage local
-        if (body.classList.contains("dark")) {
-            localStorage.setItem("darkMode", "enabled");
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-        }
-    });
-});*/
 
 // Animation d'apparitions des projets
 document.addEventListener("DOMContentLoaded", function () {
@@ -155,49 +133,12 @@ document.addEventListener("DOMContentLoaded", function () {
 // Actualise la signature du site automatiquement en fonction de l'année
 document.getElementById("year").textContent = new Date().getFullYear();
 
-//Menu burger
-/*
-document.getElementById("menu-toggle").addEventListener("click", function () {
-    let mobileMenu = document.getElementById("mobile-menu");
-    mobileMenu.classList.toggle("hidden");
-});
-
+//Gestion menu burger
 // Fermer le menu quand on clique sur un lien
-document.querySelectorAll("#mobile-menu a").forEach(link => {
-    link.addEventListener("click", function () {
-        document.getElementById("mobile-menu").classList.add("hidden");
-    });
-});*/
-
-/*
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const menuLinks = document.querySelectorAll("#mobile-menu a");
-    const darkModeToggle = document.getElementById("dark-mode-toggle");
-    const darkModeToggleMobile = document.getElementById("dark-mode-toggle-mobile");
-
-    // Ouvrir / Fermer le menu burger
-    menuToggle.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-    });
-
-    // Fermer le menu burger après un clic sur un lien
-    menuLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            mobileMenu.classList.add("hidden");
-        });
-    });
-
-    // Fonction pour basculer le mode sombre
-    function toggleDarkMode() {
-        document.documentElement.classList.toggle("dark");
-    }
-
-    // Événements pour le mode sombre
-    darkModeToggle.addEventListener("click", toggleDarkMode);
-    darkModeToggleMobile.addEventListener("click", toggleDarkMode);
-});*/
+// Ouvrir / Fermer le menu burger
+// Fermer le menu burger après un clic sur un lien
+// Activer et desactiver le mode sombre
+// Événements pour le mode sombre
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -234,8 +175,117 @@ document.addEventListener("DOMContentLoaded", function () {
     darkModeToggleMobile.addEventListener("click", toggleDarkModeAndCloseMenu);
 });
 
+/*
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleTextBtn = document.getElementById("toggle-text");
+    const moreText = document.getElementById("more-text");
+
+    toggleTextBtn.addEventListener("click", function () {
+        if (moreText.classList.contains("hidden")) {
+            moreText.classList.remove("hidden");
+            toggleTextBtn.textContent = "Voir moins";
+        } else {
+            moreText.classList.add("hidden");
+            toggleTextBtn.textContent = "Voir plus";
+        }
+    });
+});
+
+*/
+
+document.addEventListener("DOMContentLoaded", function () {
+    const projects = document.querySelectorAll(".project");
+
+    projects.forEach(function (project) {
+        const toggleTextBtn = project.querySelector(".toggle-text");
+        const moreText = project.querySelector(".more-text");
+        const githubLink = project.querySelector(".github-link");
+
+        toggleTextBtn.addEventListener("click", function () {
+            if (moreText.classList.contains("hidden")) {
+                moreText.classList.remove("hidden");
+                toggleTextBtn.textContent = "Voir moins";
+                githubLink.classList.remove("hidden"); // Afficher le bouton "En savoir plus..."
+            } else {
+                moreText.classList.add("hidden");
+                toggleTextBtn.textContent = "Voir plus";
+                githubLink.classList.add("hidden"); // Cacher le bouton "En savoir plus..."
+            }
+        });
+    });
+});
+
+
+/*
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleTextBtn = document.getElementById("toggle-text");
+    const moreText = document.getElementById("more-text");
+    const githubLink = document.getElementById("github-link");
+
+    toggleTextBtn.addEventListener("click", function () {
+        if (moreText.classList.contains("hidden")) {
+            moreText.classList.remove("hidden");
+            toggleTextBtn.textContent = "Voir moins";
+            githubLink.classList.remove("hidden"); // Afficher le bouton "En savoir plus..."
+        } else {
+            moreText.classList.add("hidden");
+            toggleTextBtn.textContent = "Voir plus";
+            githubLink.classList.add("hidden"); // Cacher le bouton "En savoir plus..."
+        }
+    });
+});*/
 
 
 
 
 
+
+/*
+<!-- 
+
+
+
+                                <!-- Projet 1 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <img src="images/zone-composant.jpg" alt="Projet 1" class="rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">Système intelligent de tri des déchets ménagers</h3>
+                    
+                    <p id="text-project" class="text-gray-600 dark:text-gray-300 text-justify">
+                        Ce projet vise à développer un système intelligent capable de trier automatiquement les déchets en utilisant un 
+                        modèle de classification d’image. 
+                        <span id="more-text" class="hidden">
+                        Le système est équipé d’une caméra et utilise un modèle de machine learning 
+                        pour identifier et trier les déchets en différentes catégories.
+                        </span>
+                    </p>
+                    
+                    <!-- Boutons Voir plus / Voir moins -->
+                    <button id="toggle-text" class="text-blue-500 hover:underline mt-2">Voir plus</button>
+
+                    <!-- Bouton En savoir plus (Lien GitHub), initialement caché -->
+                    <a id="github-link" href="https://github.com/ton-repo/projet-tri-dechets" 
+                    class="hidden block text-center border border-blue-500 text-blue-500 px-4 py-2 rounded-lg mt-4 w-fit ml-auto hover:bg-blue-500 hover:text-white transition">
+                    En savoir plus...
+                    </a>
+                </div>
+
+
+
+    
+                <!-- Projet 2 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <img src="images/hands-typing-keyboard-top-view.jpg" alt="Projet 2" class="rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">Projet 2</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Description rapide du projet.</p>
+                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">Voir plus</a>
+                </div>
+    
+            <!-- Projet 3 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+                    <img src="images/pj3.jpg" alt="Projet 3" class="rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">Projet 3</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Description rapide du projet.</p>
+                    <a href="#" class="text-blue-500 hover:underline mt-2 inline-block">Voir plus</a>
+                </div>
+
+            -->*/
