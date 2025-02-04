@@ -21,7 +21,7 @@
     
     <header class="bg-gray-800 text-white p-4 fixed w-full top-0 flex justify-between items-center">
         <h1 class="text-5xl font-bold mt-4 flex items-center">
-            <span id="backTop" class="text-blue-500">JM</span>
+            <span id="backTop" class="text-blue-500">J</span>      <span id="backTop" class="text-white-500">M</span>
         </h1>        
     
         <!-- Bouton Menu Burger (visible sur mobile) -->
@@ -61,41 +61,67 @@
         <img src="images/jude1.jpg" alt="Ma photo de profil" class="w-80 h-100 rounded-full shadow-lg border-4 border-white">
         <h1 class="text-4xl font-bold mt-4">Salut, c'est <span class="text-blue-500">Judicaël Makwiza</span> !</h1>
         <p class="text-lg text-gray-600 mt-2">Développeur passionné par le web et l’IA</p>
+        <br>
         <div class="mt-4">
-            <a href="#projects" class="bg-blue-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300">
+            <a href="#projects" class="bg-blue-500 text-white px-6 py-4 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
                 Voir mes projets
             </a>
         </div>
     </section>
-    
+
 
     <section id="about" class="py-16 bg-white text-center">
-        <h2  class="text-3xl font-bold text-gray-800">À propos de moi</h2>
-        <p class="mt-4 text-gray-600 max-w-3xl mx-auto text-justify">
-            Passionné par le développement web et mobile, ainsi que par le design graphique, 
-            je crée des interfaces modernes et intuitives. 
-            Mon objectif est de concevoir des solutions numériques innovantes, 
-            combinant esthétique et performance. Actuellement, 
-            je travaille sur plusieurs projets alliant développement et créativité, 
-            avec une vision d'avenir axée sur l'organisation d'événements culturels et la billetterie numérique sécurisée.
-        </p>
+        <h2 class="text-3xl font-bold text-gray-800">À propos de moi</h2>
     
-        <div class="mt-8 max-w-4xl mx-auto relative">
-            <div class="border-l-4 border-blue-500 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+        <div class="flex flex-col md:flex-row items-center md:items-start space-x-0 md:space-x-8 mt-8 max-w-6xl mx-auto">
     
-            <div class="relative bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto my-6">
-                <h3 class="text-lg font-semibold">2019 - 2024</h3>
-                <p class="text-gray-600 text-sm">Licence en Informatique à l'Université de Kinshasa</p>
-                <br>
-                <img src="images/batiment-unikin.jpg" alt="Projet 1" class="rounded-lg">
+            <!-- Colonne 2 : Timeline des études -->
+            <div class="mt-6 max-w-lg relative">
+                <div class="border-l-4 border-blue-500 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+    
+                <div class="relative bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto my-6">
+                    <h3 class="text-lg font-semibold">2019 - 2024</h3>
+                    <p class="text-gray-600 text-sm">Licence en Informatique à l'Université de Kinshasa</p>
+                    <br>
+                    <img src="images/batiment-unikin.jpg" alt="Projet 1" class="rounded-lg">
+                </div>
+    
+                <div class="relative bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto my-6">
+                    <h3 class="text-lg font-semibold">2025 - À nos jours</h3>
+                    <p class="text-gray-600 text-sm">Début du Master</p>
+                </div>
             </div>
+
+                        <!-- Colonne 1 : Texte + Image -->
+
+                        <div class="flex flex-col items-center max-w-2xl text-justify">
+                            <p class="text-gray-600">
+                                Passionné par le développement web et mobile, ainsi que par le design graphique, 
+                                je crée des interfaces modernes et intuitives. 
+                                Mon objectif est de concevoir des solutions numériques innovantes, 
+                                combinant esthétique et performance. Actuellement, 
+                                je travaille sur plusieurs projets alliant développement et créativité, 
+                                avec une vision d'avenir axée sur l'organisation d'événements culturels et la billetterie numérique sécurisée.
+                            </p>
+                            <img src="images/moi23.jpg" alt="Université de Kinshasa" class="mt-4 w-full md:w-80 hidden-img" id="imgabout">
+                        </div>
+                        
+            <!--<div class="flex flex-col items-center  max-w-2xl text-justify">
+                <p class="text-gray-600">
+                    Passionné par le développement web et mobile, ainsi que par le design graphique, 
+                    je crée des interfaces modernes et intuitives. 
+                    Mon objectif est de concevoir des solutions numériques innovantes, 
+                    combinant esthétique et performance. Actuellement, 
+                    je travaille sur plusieurs projets alliant développement et créativité, 
+                    avec une vision d'avenir axée sur l'organisation d'événements culturels et la billetterie numérique sécurisée.
+                </p>
+                <img src="images/moi23.jpg" alt="Université de Kinshasa" class="mt-4 w-full md:w-80" id="imgabout">
+
+            </div>-->
     
-            <div class="relative bg-white p-4 rounded-lg shadow-lg max-w-sm mx-auto my-6">
-                <h3 class="text-lg font-semibold">2025 - A nos jours</h3>
-                <p class="text-gray-600 text-sm">Début du Master</p>
-            </div>
         </div>
     </section>
+    
     
 
     <section id="projects" class="py-12 bg-gray-100 dark:bg-gray-900">
@@ -104,74 +130,74 @@
     
             <div class="grid md:grid-cols-3 gap-8">
 
-        <!-- Projet 1 -->
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition project w-full">
-            <img src="images/zone-composant.jpg" alt="Projet 1" class="rounded-lg w-full h-auto">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">SITDM</h3>
-            
-            <p class="text-gray-600 dark:text-gray-300 text-justify project-text">
-                Ce projet vise à développer un système intelligent capable de trier automatiquement les déchets en utilisant un 
-                modèle de classification d’image. 
-                <span class="more-text hidden">
-                Le système est équipé d’une caméra et utilise un modèle de machine learning pour identifier et trier les déchets en différentes catégories.
-                </span>
-            </p>
-            
-            <!-- Boutons Voir plus / Voir moins -->
-            <button class="toggle-text text-blue-500 hover:underline mt-2">Voir plus</button>
+                <!-- Projet 1 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition project w-full">
+                    <img src="images/zone-composant.jpg" alt="Projet 1" class="rounded-lg w-full h-auto">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">SITDM</h3>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 text-justify project-text">
+                        Ce projet vise à développer un système intelligent capable de trier automatiquement les déchets en utilisant un 
+                        modèle de classification d’image. 
+                        <span class="more-text hidden">
+                        Le système est équipé d’une caméra et utilise un modèle de machine learning pour identifier et trier les déchets en différentes catégories.
+                        </span>
+                    </p>
+                    
+                    <!-- Boutons Voir plus / Voir moins -->
+                    <button class="toggle-text text-blue-500 hover:underline mt-2">Voir plus</button>
 
-            <!-- Bouton En savoir plus (Lien GitHub), initialement caché -->
-            <a href="https://github.com/JudicaelMAKWIZA/Systeme-intelligent-de-tri-des-dechets-menagers" 
-            class="github-link hidden block text-center border border-blue-500 text-blue-500 px-4 py-2 rounded-lg mt-4 w-fit ml-auto hover:bg-blue-500 hover:text-white transition">
-            En savoir plus...
-            </a>
-        </div>
+                    <!-- Bouton En savoir plus (Lien GitHub), initialement caché -->
+                    <a href="https://github.com/JudicaelMAKWIZA/Systeme-intelligent-de-tri-des-dechets-menagers" 
+                    class="github-link hidden block text-center border border-blue-500 text-blue-500 px-4 py-2 rounded-lg mt-4 w-fit ml-auto hover:bg-blue-500 hover:text-white transition">
+                    En savoir plus...
+                    </a>
+                </div>
 
-        <!-- Projet 2 -->
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition project w-full">
-            <img src="images/pharma1.jpg" alt="Projet 2" class="rounded-lg w-full h-auto">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">PharmApp</h3>
-            
-            <p class="text-gray-600 dark:text-gray-300 text-justify project-text">
-                Nous avons le plaisir de vous présenter notre plateforme pour la gestion d'un dépôt pharmaceutique ou d'une pharmacie. 
-               
-                <span class="more-text hidden">
-                Sur notre site, vous pourrez visualiser en ligne les différents produits pharmaceutiques que nous proposons et les choisir directement en ligne. 
-                La plateforme calculera automatiquement la facture pour vous, et vous pourrez même l'imprimer vous-même.
-                </span>
-            </p>
-            
-            <!-- Boutons Voir plus / Voir moins -->
-            <button class="toggle-text text-blue-500 hover:underline mt-2">Voir plus</button>
+                <!-- Projet 2 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition project w-full">
+                    <img src="images/pharma1.jpg" alt="Projet 2" class="rounded-lg w-full h-auto">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">PharmApp</h3>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 text-justify project-text">
+                        Nous avons le plaisir de vous présenter notre plateforme pour la gestion d'un dépôt pharmaceutique ou d'une pharmacie. 
+                    
+                        <span class="more-text hidden">
+                        Sur notre site, vous pourrez visualiser en ligne les différents produits pharmaceutiques que nous proposons et les choisir directement en ligne. 
+                        La plateforme calculera automatiquement la facture pour vous, et vous pourrez même l'imprimer vous-même.
+                        </span>
+                    </p>
+                    
+                    <!-- Boutons Voir plus / Voir moins -->
+                    <button class="toggle-text text-blue-500 hover:underline mt-2">Voir plus</button>
 
-            <!-- Bouton En savoir plus (Lien GitHub), initialement caché -->
-            <a href="https://github.com/JudicaelMAKWIZA/Pharmacie" 
-            class="github-link hidden block text-center border border-blue-500 text-blue-500 px-4 py-2 rounded-lg mt-4 w-fit ml-auto hover:bg-blue-500 hover:text-white transition">
-            En savoir plus...
-            </a>
-        </div>
+                    <!-- Bouton En savoir plus (Lien GitHub), initialement caché -->
+                    <a href="https://github.com/JudicaelMAKWIZA/Pharmacie" 
+                    class="github-link hidden block text-center border border-blue-500 text-blue-500 px-4 py-2 rounded-lg mt-4 w-fit ml-auto hover:bg-blue-500 hover:text-white transition">
+                    En savoir plus...
+                    </a>
+                </div>
 
-        <!-- Projet 3 -->
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition project w-full">
-            <img src="images/pj3.jpg" alt="Projet 3" class="rounded-lg w-full h-auto">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">CUKApp</h3>
-            
-            <p class="text-gray-600 dark:text-gray-300 text-justify project-text">
-                CUKApp est une plateforme en ligne qui permet aux patients d'une clinique de pouvoir prendre un rendez-vous avec un expert de 
-                la santé.               
-                <span class="more-text hidden">
-                La plateforme couvre presque tous les services que vous pouvez retrouver dans une clinique (Radiologie, Dentisterie, etc.) 
-                </span>
-            </p>
-            
-            <!-- Boutons Voir plus / Voir moins -->
-            <button class="toggle-text text-blue-500 hover:underline mt-2">Voir plus</button>
+                <!-- Projet 3 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition project w-full">
+                    <img src="images/pj3.jpg" alt="Projet 3" class="rounded-lg w-full h-auto">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white mt-4">CUKApp</h3>
+                    
+                    <p class="text-gray-600 dark:text-gray-300 text-justify project-text">
+                        CUKApp est une plateforme en ligne qui permet aux patients d'une clinique de pouvoir prendre un rendez-vous avec un expert de 
+                        la santé.               
+                        <span class="more-text hidden">
+                        La plateforme couvre presque tous les services que vous pouvez retrouver dans une clinique (Radiologie, Dentisterie, etc.) 
+                        </span>
+                    </p>
+                    
+                    <!-- Boutons Voir plus / Voir moins -->
+                    <button class="toggle-text text-blue-500 hover:underline mt-2">Voir plus</button>
 
-            <!-- Bouton En savoir plus (Lien GitHub), initialement caché -->
-            <a href="https://github.com/JudicaelMAKWIZA/CUKApp" 
-            class="github-link hidden block text-center border border-blue-500 text-blue-500 px-4 py-2 rounded-lg mt-4 w-fit ml-auto hover:bg-blue-500 hover:text-white transition">
-            En savoir plus...
-            </a>
+                    <!-- Bouton En savoir plus (Lien GitHub), initialement caché -->
+                    <a href="https://github.com/JudicaelMAKWIZA/CUKApp" 
+                    class="github-link hidden block text-center border border-blue-500 text-blue-500 px-4 py-2 rounded-lg mt-4 w-fit ml-auto hover:bg-blue-500 hover:text-white transition">
+                    En savoir plus...
+                    </a>
         </div>
 
 

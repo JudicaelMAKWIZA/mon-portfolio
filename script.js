@@ -216,6 +216,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const img = document.getElementById("imgabout");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    img.classList.add("visible-img");
+                }
+            });
+        },
+        { threshold: 0.8 } // Déclenche l’animation quand 80% de l'image est visible
+    );
+
+    observer.observe(img);
+});
+
+
 /*
 document.addEventListener("DOMContentLoaded", function () {
     const toggleTextBtn = document.getElementById("toggle-text");
